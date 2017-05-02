@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  SpeedTest
+//
+//  Created by shen on 17/4/14.
+//  Copyright © 2017年 shen. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#ifndef __OPTIMIZE__
+#define NSLog(...) printf("DEBUG LOG:%s\n",[[NSString stringWithFormat:__VA_ARGS__] UTF8String]);
+#endif
+
+#endif
+
+//屏幕的宽和高
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
+
+#define kMainScreenColor  [UIColor colorWithRed:0.004 green:0.651 blue:0.996 alpha:1.000]
+#define kLineColor [UIColor colorWithRed:240.0/255 green:240.0/255 blue:246.0/255 alpha:1]
+
+#define kMainViewBgColor  [UIColor colorWithRed:246.0/255 green:246.0/255 blue:246.0/255 alpha:1]
+#import "EPProgressShow.h"
+
+/*******************
+ APP评分跳转链接
+ ******************* */
+//#define APPCommentURL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1219112934&pageNumber=0&sortOrdering=2&mt=8"
+#define APPCommentURL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1216010634&pageNumber=0&sortOrdering=2&mt=8"
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYTDNSViewController">
+            <connections>
+                <outlet property="DNSBtn" destination="3VQ-ZC-Q0K" id="Cwm-kC-cLY"/>
+                <outlet property="domainTextField" destination="pPI-nn-sDf" id="pqU-3B-Yey"/>
+                <outlet property="view" destination="pqO-SD-vXs" id="wVr-x3-GMn"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pqO-SD-vXs">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="域名:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZA-cg-VIS">
+                    <rect key="frame" x="15" y="85" width="33" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bgc-7O-2rr">
+                    <rect key="frame" x="275" y="78.5" width="30" height="30"/>
+                    <color key="backgroundColor" red="0.87833553549999999" green="0.87848657370000005" blue="0.8783260584" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1Gy-x4-5w0"/>
+                        <constraint firstAttribute="width" constant="30" id="SYO-SN-Q7K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="➕">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="clickAddbtn:" destination="-1" eventType="touchUpInside" id="dCX-FN-RKI"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="www.baidu.com" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPI-nn-sDf">
+                    <rect key="frame" x="53" y="83" width="217" height="21"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                </textField>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VQ-ZC-Q0K">
+                    <rect key="frame" x="265" y="113.5" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Opp-rL-UY7"/>
+                        <constraint firstAttribute="height" constant="40" id="Uce-0m-txe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="解析">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="DNSClick:" destination="-1" eventType="touchUpInside" id="9WV-Gq-mBI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pZA-cg-VIS" firstAttribute="top" secondItem="pqO-SD-vXs" secondAttribute="top" constant="85" id="0Fv-ht-FBB"/>
+                <constraint firstItem="Bgc-7O-2rr" firstAttribute="centerY" secondItem="pZA-cg-VIS" secondAttribute="centerY" id="0KO-7N-Upn"/>
+                <constraint firstItem="3VQ-ZC-Q0K" firstAttribute="top" secondItem="Bgc-7O-2rr" secondAttribute="bottom" constant="5" id="Dbv-Re-y69"/>
+                <constraint firstItem="pPI-nn-sDf" firstAttribute="leading" secondItem="pZA-cg-VIS" secondAttribute="trailing" constant="5" id="DrA-7y-NfD"/>
+                <constraint firstItem="pZA-cg-VIS" firstAttribute="leading" secondItem="pqO-SD-vXs" secondAttribute="leading" constant="15" id="Xt3-9x-1Un"/>
+                <constraint firstItem="pPI-nn-sDf" firstAttribute="centerY" secondItem="pZA-cg-VIS" secondAttribute="centerY" id="den-dX-kFb"/>
+                <constraint firstItem="Bgc-7O-2rr" firstAttribute="leading" secondItem="pPI-nn-sDf" secondAttribute="trailing" constant="5" id="neW-Tq-Lci"/>
+                <constraint firstAttribute="trailing" secondItem="Bgc-7O-2rr" secondAttribute="trailing" constant="15" id="oty-uc-LzH"/>
+                <constraint firstItem="3VQ-ZC-Q0K" firstAttribute="trailing" secondItem="Bgc-7O-2rr" secondAttribute="trailing" id="sdF-BT-tUp"/>
+            </constraints>
+            <point key="canvasLocation" x="-147" y="47"/>
+        </view>
+    </objects>
+</document>
